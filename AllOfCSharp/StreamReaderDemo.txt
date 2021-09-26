@@ -1,0 +1,27 @@
+﻿using System;
+using System.IO;
+
+namespace AllOfCSharp
+{
+    class StreamReaderDemo
+    {
+        static void Main(string[] args)
+        {
+            try
+            {
+                using (StreamReader sr = new StreamReader("E://C#//AllOfCSharp//AllOfCSharp//StreamReaderDemo.txt"))
+                {
+                    string line;
+                    while ((line = sr.ReadLine()) != null)
+                    {
+                        Console.WriteLine(line);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
+    }
+}
